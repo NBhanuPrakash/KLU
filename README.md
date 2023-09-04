@@ -1,3 +1,3 @@
 This Is my Collage Login page
 
-click this link :
+click this link :  https://nbhanuprakash.github.io/KLU/
