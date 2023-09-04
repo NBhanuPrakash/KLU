@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="sislogin.css" />
+    <title>Student Information System - KARE-SIS</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="icon" href="Bg1 (3).png" />
+    <script
+      src="https://kit.fontawesome.com/ed2f933003.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="slider()">
+    <div class="user-login-5">
+      <div class="row">
+        <div class="col-md-6 bs-reset">
+          <div class="login-bg bs-reset">
+            <img src="Bg1 (1).png" id="slideimg" >
+          
+          </div>
+          <div class="logo">
+            <img type="logo"
+            src="https://sis.kalasalingam.ac.in/images/kare_logo.png"
+            class="login-logo mt-4 ms-4"
+          />
+          </div>
+        </div>
+        <div class="col-md-6 login-container bs-reset">
+          <div class="login-content">
+            <h1>Login - SIS</h1>
+            <p class="mt-4">Student Information System - KARE</p>
+            <div class="warn mt-4 " id="warning">
+              <span class="">Enter any Register Number and Password.</span>
+            </div>
+            <form
+              action="#"
+              class="login-form"
+              method="post"
+            >
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="marginb">
+                    <input
+                      type="text"
+                      class="form-control form-control-solid placeholder-no-fix form-group required"
+                      name="registerno"
+                      placeholder="Register No"
+                      autocomplete="off"
+                      required
+                      id="length"
+                    />
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="marginb">
+                    <input
+                      type="password"
+                      class="form-control form-control-solid placeholder-no-fix form-group required"
+                      name="passworda"
+                      placeholder="Password"
+                      autocomplete="off"
+                      required
+                      id="length2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-sm-6">
+                  <div class="rememberme">
+                    <label class="rememberme mt-checkbox mt-checkbox-outline">
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        value="1"
+                      />Remember me
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6 text-right sig-btn">
+                  <button
+                    class="btn-primary bg-primary text-white"
+                    type="submit" onclick="warning()"
+                  >
+                    Sign In
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="login-footer">
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="login-social list-inline adjusta">
+                    <li class="list-inline-item">
+                      <a target="_blank"
+                        href="https://www.facebook.com/kalasalingamuniversity.klu"
+                      >
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a target="_blank" href="https://twitter.com/KLU_official">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a target="_blank"
+                        href="https://www.youtube.com/channel/UCn7qESyFTyyRbyStJxZYYwg"
+                      >
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <div class="login-copyright text-end ">
+                    <p>Copyright &copy; NN Bhanu</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        const length = document.getElementById("length");
+        const length2 = document.getElementById("length2");
+        function warning(){
+            if(length.value=="" && length2.value==""){
+                document.getElementById("warning").style.visibility="visible";
+                document.getElementById("length").style.borderColor="red";
+                document.getElementById("length2").style.borderColor="red";
+            }
+
+        }
+    </script>
+    <script>
+        var slideimg = document.getElementById("slideimg");
+
+        var images = new Array(
+            "Bg1 (1).png",
+            "Bg1 (2).png",
+            "Bg1 (4).png"
+        );
+
+        var len = images.length;
+        var i=0;
+
+        function slider(){
+            if(i > len-1){
+                i=0;
+            }
+            slideimg.src = images[i];
+            i++
+            setTimeout("slider()",10000);
+        }
+    </script>
+  </body>
+</html>
